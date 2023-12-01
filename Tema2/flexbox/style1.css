@@ -13,11 +13,12 @@ html {
 body {
   margin: 0;
 }
-p::first-letter {
+p:first-letter {
     font-size: 200%;
     font-weight: bold;
-    color: #4c3803;
+    
 }
+
 header { /*Estilo del encabezado*/
     background-color: #b28306;
     color: #4c3803;
