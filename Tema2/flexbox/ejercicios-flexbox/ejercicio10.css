@@ -1,0 +1,55 @@
+html,
+body {
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: xx-large;
+}
+
+#contenedor {
+    border: 5px solid red;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+}
+
+#contenedor>div {
+    text-align: center;
+    min-height: 25%;
+}
+
+#contenedor div:nth-of-type(1) { /* Hecho de la misma forma que el ejercicio 9 */
+    flex-grow: 3;
+    background-color: lightseagreen;
+}
+
+#contenedor div:nth-of-type(2) {
+    flex-grow: 3;
+    background-color: lightskyblue;
+}
+
+#contenedor div:nth-of-type(3) {
+    flex-grow: 4;
+    background-color: violet;
+}
+
+#contenedor div:nth-of-type(4) {
+    flex-grow: 1;
+    background-color: darkslategray;
+    min-height: auto;
+}
+
+#contenedor div:nth-of-type(5) {
+    flex-grow: 6;
+    background-color: yellow;
+}
+
+#contenedor div:nth-of-type(6) {
+    flex-grow: 6;
+    background-color: orange;
+}
