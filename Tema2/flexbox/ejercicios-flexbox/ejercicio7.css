@@ -1,0 +1,48 @@
+html,
+body {
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+.contenedor {
+    border: 5px solid red;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    font-size: xx-large;
+}
+.contenedor > div{
+    width: 33.33%;
+    height: auto;}
+
+#div1 {background-color: lightseagreen;}
+
+#div2 {background-color: lightskyblue;}
+
+#div3 {background-color: violet;}
+
+#div4 {background-color: darkslategray;}
+
+#div5 {background-color: yellow;}
+
+#div6 {background-color: orange;}
+
+#div7 {background-color: red;}
+
+#div8 {background-color: grey;}
+
+#div9 {background-color: lightgreen;}
+
+#div10 {background-color: darkgreen;}
