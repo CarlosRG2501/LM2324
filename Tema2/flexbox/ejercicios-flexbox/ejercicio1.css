@@ -1,70 +1,51 @@
 
-body{
-    margin: 0%;
-
+html,body{
+    height: 100vh; /* vh: altura de la ventana visible*/
+    margin: 0;
+    overflow: hidden;
 }
 
-.principal{
+div{
     color: white;
-    text-align: center;
-    border: solid red;
-    width: 100%;
-    height: 100%;
+    font-size: 30px;
+}
+.contenedor{
+    box-sizing: border-box;
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    border: 5px solid red; 
 }
 
-.cajadenumeros{
-  font-size: 70px;
-  display: flex; 
- 
-  flex: 100%;
-  
+#div1{
+    background-color: lightseagreen;
+}
+#div2{
+    background-color: lightskyblue;
+}
+#div3{
+    background-color: violet;
+}
+#div4{
+    background-color: darkslategray;
+}
+#div5{
+    background-color: yellow;
+}
+#div6{
+    background-color: orange;
+}
+#div7{
+    background-color: red;
+}
+#div8{
+    background-color: grey;
+}
+#div9{
+    background-color: lightgreen
+}
+#div10{
+    background-color: darkgreen;
 }
 
-.cajadenumeros > div{
-    padding: 5px;
-    padding-bottom: 44%;
-    font-size: 30%;
-
-
-}
-
-.primero{
-    background-color: rgb(18, 221, 160);
-    
-}
-
-.segundo{
-    background-color: rgb(18, 140, 221);
-}
-
-.tercero{
-    background-color: rgb(127, 54, 223);
-}
-
-.cuarto{
-    background-color: rgb(122, 122, 122);
-}
-
-.quinto{
-    background-color: rgb(221, 218, 18);
-}
-
-.sexto{
-    background-color: rgb(221, 150, 18);
-}
-
-.septimo{
-    background-color: rgb(221, 18, 18);
-}
-
-.octavo{
-    background-color: rgb(217, 218, 217);
-}
-
-.noveno{
-    background-color: rgb(18, 221, 35);
-}
-
-.decimo{
-    background-color: rgb(0, 148, 116);
-}

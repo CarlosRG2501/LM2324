@@ -1,0 +1,34 @@
+html, body{
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+div{
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+.contenedor{
+    border: 5px solid red;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /*colocar los div como cajas*/
+    height: 100vh;
+}
+.contenedor > div{
+    width: 33.33%;
+}
+
+#div1{  background-color: rgb(32, 178, 170);}
+#div2{background-color: rgb(127, 198, 243);}
+#div3{background-color: rgb(238, 130, 238);}
+#div4{background-color: rgb(47, 79, 79);}
+#div5{background-color: rgb(255, 255, 0);}
+#div6{background-color: rgb(253, 165, 0);}
+#div7{background-color: rgb(253, 0, 0);}
+#div8{background-color: rgb(136, 133, 133);}
+#div9{background-color: rgb(144, 238, 144)}
+#div10{background-color: rgb(2, 90, 2);}
