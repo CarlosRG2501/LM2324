@@ -1,0 +1,47 @@
+html,
+body {
+    overflow: hidden;
+    /* height: 100vh; */
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.contenedor {
+    border: 5px solid red;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+ /*height: 100vh; si le pones esto los cuadros ocuoan toda la pantalla hasta abajo*/ 
+}
+
+.contenedor>div {
+flex: 1;
+}
+
+#div1 {background-color: lightseagreen; order: 0;}
+
+#div2 {background-color: lightskyblue; order: 1;}
+
+#div3 {background-color: violet; order: 2;}
+
+#div4 {background-color: darkslategray; order: 3;}
+
+#div5 {background-color: yellow; order: -1;}
+
+#div6 {background-color: orange; order: 8;}
+
+#div7 {background-color: red; order: 4;}
+
+#div8 {background-color: grey; order: 5;}
+
+#div9 {background-color: lightgreen; order: 6;}
+
+#div10 {background-color: darkgreen; order: 7;}

@@ -1,0 +1,63 @@
+html,
+body {
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+.contenedor {
+    border: 5px solid red;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:first baseline;
+}
+/*En vez de poner una medida con numeros mejor estas para tener una escala mas clara de como puede ser la pagina*/
+#div1 {
+    background-color: lightseagreen; 
+    font-size: small;}
+
+#div2 {
+    background-color: lightskyblue;
+    font-size: large;}
+
+#div3 {
+    background-color: violet;
+    font-size: x-large;}
+
+#div4 {
+    background-color: darkslategray;
+    font-size: xx-large;}
+
+#div5 {
+    background-color: yellow;
+    font-size: xx-small;}
+
+#div6 {
+    background-color: orange;
+    font-size: large;}
+
+#div7 {
+    background-color: red;
+    font-size: large;}
+
+#div8 {
+    background-color: grey;
+    font-size: large;}
+
+#div9 {
+    background-color: lightgreen;
+    font-size: large;}
+
+#div10 {
+    background-color: darkgreen;
+    font-size: small;}
