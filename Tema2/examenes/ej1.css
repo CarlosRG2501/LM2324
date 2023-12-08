@@ -1,70 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
-html{
-    
-    background-color: #970043;
+* {
+    box-sizing: border-box;
+  }
+  h2 {
+      margin: 0;
+  }
+  body {
     font-family: 'Open Sans', Helvetica, sans-serif;
-    background-size: cover;
+    background-color: #970043;
+    height: 100vh;
+  }
+  
+  header {
+    background-color: #ffd100;
+    padding: 20px;
+    text-align: center;
+    font-size: x-large;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
  
-}
+  main {
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  
+  aside {
+    padding: 10px;
+    background-color:#970043;
+  }
 
-body{
-    margin: 0px;
+  
+  aside {
+     -webkit-flex: 1;
+     -ms-flex: 1;
+     flex: 1;
+     align-content: center;
+     justify-content: center;
+     text-align: center;
+     margin-top: auto;
+     margin-bottom: auto;
+  }
+  img {
+      max-width:100%;
+  }
+  #imagencentro {
+      max-width:100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+  }
+  
+  article {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    overflow: auto;
+    background-color: #f2f2f2;
+    height:100vh;
+  }
+  article:hover {
+      -webkit-flex: 2;
+      -ms-flex: 2;
+      flex: 2;
+      overflow: auto;
+      background-color: #970043;
+      color: #f2f2f2;
+  }
 
-
-}
-
-p:first-letter{
-    font-size: 150%;
-    font-weight: bold;
-}
-
-header{
+  p {
+      margin: 0 auto;
+  }
+  p::first-letter {
+      font-size: 1.5rem;
+      font-weight: bold;
+  }
+  
+  a {
+      text-decoration: none;
+      font-weight: bold;
+      cursor:help;
+      color:#ffd100
+  }
+  footer {
     background-color: #ffd100;
-    border-top-left-radius: 15px;
+    padding: 10px;
     text-align: center;
-   
-}
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  footer a{
+      color:black;
+  }
+  @media (max-width: 768px) {
+    main {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
 
 
-article{
-    
-}
 
-#aside1{
-image-;
-}
-
-#aside2{
-
-}
-
-main{
-display: flex;
-    flex-direction: row;
-}
-
-footer{
-    background-color: #ffd100;
-    border-bottom-left-radius: 15px;
-    text-align: center;
-    margin: 0px;
-}
-
-#imagencentro{
-    border-radius: 10px;
-    max-width: 100%;
-    
-
-}
-
-#a1{
-text-decoration: none;
-color: #ffd100;
-}
-
-#a2{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
