@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    background-color: white;
+   
+    font-family: 'Century Gothic', 'helvetica', Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    color: white;
+}
+
+
+
+
+p:first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    color: darkgray;
+}
+
+header{
+background-color: darkgray;
+text-align: center;
+color: white;
+padding: 20px;
+border: solid 2px;
+border-color: whitesmoke;
+border-radius: 10px;
+color: white;
+
+
+
+}
+
+nav{
+background-color: darkcyan;
+
+padding: 20px;
+border: solid 2px;
+border-color: whitesmoke;
+border-radius: 10px;
+color: white;
+width: 15em;
+
+
+}
+
+.wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.section{
+background-color: darkolivegreen;
+padding: 20px;
+
+border: solid 2px;
+border-color: whitesmoke;
+border-radius: 10px;
+color: white;
+
+
+}
+
+footer{
+
+text-align: center;
+background-color: darkgoldenrod;
+padding: 20px;
+border: solid 2px;
+border-color: whitesmoke;
+border-radius: 10px;
+color: white;
+
+}
+
+
+
+
+nav a{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+   color: white;
+    border-bottom: solid rgba(255,255,255,0.3);
+    padding: 0.5em 1em;
+    cursor: progress;
+
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    float: left;
+    border-radius: 2vh;
+    border: solid 5px goldenrod;
+    max-height: 100%;
+    margin: 10px;
+
+}
+
+
+@media (max-width: 640px) {
+	body {
+  min-height: 0; 
+  }
+	
+  .wrapper {
+    flex-direction: column;
+  }
+	
+  .section {
+		flex-basis: auto;
+	}
+  
+  nav {
+    width: auto;
+    order: 0;
+  }
+
+}
+
+
+  @media print{
+    body{
+      font-family: 'Times New Roman', Times, serif;
+      color:black;
+      background-color: white;
+    }
+    nav {
+      display:none;
+    }
+  }
