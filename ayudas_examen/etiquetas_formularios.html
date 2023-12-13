@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas de formulario</title>
+</head>
+<body>
+    
+<form action=""> <!--"action" es a donde se va a enviar la información-->
+
+    <label for="fname">First name:</label> <!--Para nombres, apellidos y demás-->
+    <input type="text" id="fname" name="fname">
+<br>
+
+    <label for="cars">Elije un coche:</label>
+<select id="coches" name="coches">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+<!--
+    Utilizar "selected" para ver esa opción
+    Utilizar "size=x" para ver x opciones
+    Utilizar "multiple" para seleccionar varias opciones
+-->
+<br>
+
+<textarea name="message" rows="10" cols="30"> <!--Cuadro de texto-->
+    The cat was playing in the garden.
+</textarea>
+<!--rows es la altura y cols la anchura-->
+
+<br>
+<button type="button">Click Me!</button> <!--Un botón-->
+<!--onclick="alert('Hola mundo') Para que salga una alerta al tocar el botón-->
+<br>
+
+<fieldset> <!--Para poner un cuadro-->
+    <legend>Personalia:</legend> <!--Para poner el nombre en el cuadro-->
+    <label for="fname">Nombre:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Apellidos:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+<br>
+
+  <input list="browsers" name="buscador"> <!--Lista de opciones, pero con buscador-->
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+ 
+<br><br>
+<!-- 
+
+TIPOS DE "INPUT"
+-->  
+
+<input type="button">  <!-- Botón -->  <br>
+<input type="checkbox">  <!-- Marcar opciones con un tic -->  <br>
+<input type="color">  <!-- Color -->  <br>
+<input type="date">   <!-- Fecha -->  <br>
+<input type="email">  <!-- Correo -->  <br>
+<input type="file">  <!-- Seleccionar un archivo -->  <br>
+<input type="hidden"> <!-- Valor de entrada oculto -->  <br>
+<input type="image">  <!-- Subir una imagen -->  <br>
+<input type="month">  <!-- Seleccionr mes y año -->  <br>
+<input type="number">  <!-- Valor numerico -->  <br>
+<input type="password">  <!-- Contraseña -->  <br>
+<input type="radio">  <!-- Seleccionar una opción con puntos -->  <br>
+<input type="range">  <!-- Boton deslizante para poner un valor entre min y max --> <br> 
+<input type="reset">  <!-- Boton que restablece los valores del formulario -->  <br>
+<input type="search">  <!-- Campo de busqueda -->  <br>
+<input type="submit"> <!-- Boton para enviar la informacion del usuario -->  <br>
+<input type="tel">  <!-- Numeros de telefono -->  <br>
+<input type="text">  <!-- Texto -->  <br>
+<input type="time">  <!-- Permite seleccionar una hora -->  <br>
+<input type="url">  <!-- Enlace -->  <br>
+<input type="week">  <!-- Seleccionar semana y año -->  <br>
+<input type="datetime-local">  <!-- Fecha y hora local -->  
+
+
+</form>
+
+
+</body>
+</html>
