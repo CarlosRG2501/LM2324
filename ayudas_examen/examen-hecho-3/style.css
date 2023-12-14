@@ -1,104 +1,110 @@
-html {
+html { /* Todo el documento se considera flexible y con dirección de columna */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
 body {
   display: flex;
   flex-direction: column; 
-  min-height: 100vh; 
+  min-height: 100vh; /* Altura mínima */
   /* Decoración */
-  margin: 0;
-	background: #fff;
-	font-family: "Century Gothic", helvetica, arial, sans-serif;
-	font-size: 1.1em;
+  margin: 0; /* Sin márgenes*/
+  background: white;
+  font-family: "Century Gothic", helvetica, arial, sans-serif;
+  font-size: 1.1em;
 }
 
 .wrapper {
-  display: block; 
-  flex: 1 1 auto;
+  /* display: block; */
+  /* flex: 1 1 auto; */
   display: flex; 
-  flex-direction: row;
+  flex-direction: row; /* Dirección en fila para que el navegador y el artículo esten uno al lado del otro */
 }
 
-nav {
+nav { /* Barra de navegación */
   width: 15em;
+  background: darkcyan;
+}
+
+nav a {
+  display: block; /* establece que un elemento ocupará todo el espacio disponible por defecto y el siguiente elemento a este se situará por debajo */
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  cursor: progress;
 }
 
 .content {
-  display: block;
-  flex: 1;
+  flex: 1; /* Hace que el navegador pueda coger el ancho necesario para poner cada opción en una línea */
+}
+
+p::first-letter { /* Primera letra de cada párrafo en negrita y mayúscula */
+  font-size: 200% bold darkgray;
+  color: darkgray;
+  font-style: bold;
+}
+
+img {
+  float: left;
+  margin: 10px;
+  /*margin-top: 1.1vw;
+  margin-right:2vw;*/
+  border-radius: 2vh;
+  max-width: 100%;
+  border: 5px solid goldenrod;
+}
+
+header, nav, section, footer {
+    padding: 20px;
+    margin: 20;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    color: white;
+}
+
+header {
+  background: darkgray;
+  text-align: center;
+}
+
+section {
+    background: darkolivegreen;
+}
+
+footer {
+  background: darkgoldenrod;
+  text-align: center;
 }
 
 @media (max-width: 640px) {
-	body {
-  min-height: 0; 
+  body {
+    min-height: 0; 
   }
-	
+  
   .wrapper {
-    flex-direction: column;
+    flex-direction: column; /* Para que la barra de navegación y el contenido aparezcan uno encima del otro. */
   }
-	
+    
   .content {
-		flex-basis: auto;
-	}
+        flex-basis: auto; /* Se define el tamaño de un ítem en términos del espacio que deja como espacio disponible */
+        /* order: 1; Para que la barra de navegaciín aparezca encima del contenido*/
+    }
   
   nav {
     width: auto;
-    order: 0;
+    order: 0; /* Para que la barra de navegación aparezca arriba del contenido. */
   }
 
 }
 
 @media print{
   body{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif; /* Cambia la tipografía de la página al imprimir */
     color:black;
-    background-color: white;
+    background-color: white; /* Cambia los colores de fondo y de texto para que se imprima en blanco y negro */
   }
   nav {
-    display:none;
+    display:none; /* La barra de navegación desaparece al imprimir */
   }
-}
-
-p::first-letter { 
-  font-size: 200%;
-  color: darkgray;
-}
-img {
-  float: left;
-  margin-top: 1.1vw;
-  margin-right:2vw;
-  border-radius: 2vh;
-  max-width: 100%;
-  border: 5px solid goldenrod;
-}
-header, nav, section, footer {
-	padding: 20px;
-	margin: 20;
-	border: 2px solid whitesmoke;
-	border-radius: 10px;
-	color: #fff;
-}
-header {
-	background: darkgray;
-  text-align: center;
-}
-nav {
-	background: darkcyan;
-}
-nav a {
-  display: block;
-  padding: .5em 1em;
-  color: #fff;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,.3);
-  cursor: progress;
-}
-section {
-	background: darkolivegreen;
-}
-footer {
-	background: darkgoldenrod;
-  text-align: center;
 }
