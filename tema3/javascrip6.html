@@ -3,87 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 6</title>
-    <script src="circulo.js"></script>
+    <title>Círculos</title>
     <style>
-        #contenedor1{
-            display: flex;
+        .contenedor{
+            display:flex;
         }
-        #circulorojo{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: red;
-        margin: 10px 10px;
+        #rojo{
+            width:100px;
+            height:100px;
+            background-color: red;
+            border-radius: 50%;
+            margin: 10px 10px;
         }
-        #circuloazul{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: blue;
-        margin: 10px 10px;
+        #verde{
+            width:100px;
+            height:100px;
+            background-color: green;
+            border-radius: 50%;
+            margin: 10px 10px;
         }
-        #circuloverde{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: green;
-        margin: 10px 10px;
+        #azul{
+            width:100px;
+            height:100px;
+            background-color: blue;
+            border-radius: 50%;
+            margin: 10px 10px;
         }
-        #circulonegro{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: black;
-        margin: 10px 10px;
+        #negro{
+            width:100px;
+            height:100px;
+            background-color: black;
+            border-radius: 50%;
+            margin: 10px 10px;
         }
-
-        button{
-        width: 100px;
-        margin: 10px 10px;
+        button {
+            width:100px;
+            margin: 10px 10px;
         }
-
-        .contenedor2{
-            display: flex;
-
-        }
-        </style>
+    </style>
+    <script src="circulo.js"></script>
 </head>
 <body>
-    
+    <h1>Circulos</h1>
+    <div>
+        <div class="contenedor">
+            <div id="rojo"></div>
+            <div id="verde"></div>
+            <div id="azul"></div>
+            <div id="negro"></div>
 
-
-<h1>Circulos</h1>
-<div id="contenedor1">
-<div id="circulorojo"></div>
-<div id="circuloazul"></div>
-<div id="circuloverde"></div>
-<div id="circulonegro"></div>
-</div>
-
-<div class="contenedor2">
-    <button onclick="ocultar('rojo')">Ocultar rojo</button>
-    <button onclick="ocultar('azul')">Ocultar azul</button>
-    <button onclick="ocultar('verde')">Ocultar verde</button>
-    <button onclick="ocultar('negro')">Ocultar negro</button>
-</div>
-</div>
-
-<div class="contenedor2">
-        <button onclick="mostrar('rojo')">Mostrar rojo</button>
-        <button onclick="mostrar('azul')">Mostrar azul</button>
-        <button onclick="mostrar('verde')">Mostrar verde</button>
-        <button onclick="mostrar('negro')">Mostrar negro</button>
-    </div>
-    </div> 
-    <!--<div class="contenedor2">
-        <div class="boton">
-            <button onclick="ocultar('rojo')">Cambiar</button>
-            <button onclick="ocultar('azul')">Cambiar</button>
-            <button onclick="ocultar('verde')">Cambiar</button>
-            <button onclick="ocultar('negro')">Cambiar</button>
         </div>
-        </div> -->
-</body>
+        <!--
+<div class="contenedor">
+                <button onclick="ocultar('rojo')">Ocultar rojo</button>
+                <button onclick="ocultar('verde')">Ocultar verde</button>
+                <button onclick="ocultar('azul')">Ocultar azul</button>
+                <button onclick="ocultar('negro')">Ocultar negro</button>
 
+        </div>
+        <div class="contenedor">
+            <button onclick="mostrar('rojo')">mostrar rojo</button>
+            <button onclick="mostrar('verde')">mostrar verde</button>
+            <button onclick="mostrar('azul')">mostrar azul</button>
+            <button onclick="mostrar('negro')">mostrar negro</button>
+        </div>
+        -->
+        <div class="contenedor">
+            <button onclick="ocultar_o_mostrar('rojo')">Cambiar</button>
+            <button onclick="ocultar_o_mostrar('verde')">Cambiar</button>
+            <button onclick="ocultar_o_mostrar('azul')">Cambiar</button>
+            <button onclick="ocultar_o_mostrar('negro')">Cambiar</button>
+        </div>
+    </div>
+</body>
 </html>
