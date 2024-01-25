@@ -8,7 +8,7 @@
 </head>
 <body>
     <p> Realiza un script que permita introducir numeros reales en un array.
-        El script dispondrá de dos botones, "Sumar" y "Multiplicar"
+        El script dispondrá de tres botones, "Añadir" "Sumar" y "Multiplicar".
         Si el usuario pulsa "Sumar" nuestro script mostrará el total de la suma 
         de todos sus elementos mientras que si pulsa "Multiplicar" mostrará 
         el producto.
@@ -24,11 +24,12 @@
         24
     </p>
 
-    <input id="introducir" type="text" placeholder="Introduzca un numero">
-    <button onclick="añadir(numeros)">Añadir</button>
-    <button onclick="sumar(numeros)">Sumar</button>
-    <button onclick="multiplicar(numeros)">Multiplicar</button>
-    <p id="numeros"></p>
+    <input id="introducir" type="number" placeholder="Introduzca un numero">
+    <button onclick="añadir()">Añadir</button>
+    <button onclick="sumar()">Sumar numeros</button>
+    <button onclick="multiplicar()">Multiplicar numeros</button>
+    <p id="demo"></p>
+    <p id="resultado"></p>
 
 </body>
 </html>
