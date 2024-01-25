@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumar y multiplicar</title>
+    <script src="sumarymultiplicar.js"></script>
+</head>
+<body>
+    <p> Realiza un script que permita introducir numeros reales en un array.
+        El script dispondrá de dos botones, "Sumar" y "Multiplicar"
+        Si el usuario pulsa "Sumar" nuestro script mostrará el total de la suma 
+        de todos sus elementos mientras que si pulsa "Multiplicar" mostrará 
+        el producto.
+
+        Ejemplo:
+        var numeros=[1,2,3];
+
+        Si añado el 4 quedaría en pantalla así:
+        1,2,3,4
+        Si pulso "Sumar" mostraría:
+        10
+        Si pulso "Multiplicar" mostraría:
+        24
+    </p>
+
+    <input id="introducir" type="text" placeholder="Introduzca un numero">
+    <button onclick="añadir(numeros)">Añadir</button>
+    <button onclick="sumar(numeros)">Sumar</button>
+    <button onclick="multiplicar(numeros)">Multiplicar</button>
+    <p id="numeros"></p>
+
+</body>
+</html>

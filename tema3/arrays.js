@@ -1,4 +1,5 @@
-var elementos = [];
+var elementos = ["Coche", "Silla", "Moto", "Mesa", "Perro", "Gato", "Ordenador", "Amarillo", "Rojo", "Azul"];
+
 document.getElementById("accion").innerHTML = elementos;
 
 function eliminar() {
