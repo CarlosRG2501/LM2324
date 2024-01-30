@@ -10,7 +10,9 @@ function añadir(){
 function sumar() {
     s = 0
     for (var i = 0 ; i< numeros.length; i++) {
-        s += numeros[i];
+        if (numeros[i] % 2 == 0) {
+            s = s + numeros[i]
+        }
     }
     document.getElementById("mostrar").innerHTML = s;
 }
