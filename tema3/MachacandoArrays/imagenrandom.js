@@ -1,4 +1,4 @@
-var cambiar = new Array();
+var imagen = new Array();
 
     imagen[0] = "imagen1.png";
     imagen[1] = "imagen2.png";
@@ -13,8 +13,8 @@ function numero(x){
 }
 
 
-function imagenAleatoria(){
+function imagenaleatoria(){
 
- document.getElementById("imagenAleatoria").src = cambiar[numero(5)-1];
+ document.getElementById("imagenaleatoria").src = imagen[numero(5)-1];
 
 }
