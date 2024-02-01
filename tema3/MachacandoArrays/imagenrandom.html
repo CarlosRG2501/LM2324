@@ -4,11 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imagen random</title>
-    <script src="imagenrandom.js"></script>
+   <!-- <script src="imagenrandom.js"></script> -->
 </head>
+<!-- 
 <body onload="imagenaleatoria()">
 
 <p><img id="imagenaleatoria" src="imagen1.png" alt="Imagen_aleatoria"></p>
 
 </body>
+-->
+
+<body onload="seleccionaEscudo()">
+    <img id="escudo" src="" alt="">
+
+    <script>
+        let archivos = ["imagen1.png", "imagen2.png", "imagen3.png", "imagen4.png", "imagen5.png"];
+        function random(min, max){
+
+            return Math.floor((Math.random() * (max - min + 1)) + min);
+        }
+
+        function seleccionaEscudo(){
+            let numero = random(0,archivos.length - 1);
+            document.getElementById("escudo").src = "images/" + archivos[numero];
+        }
+
+
+    </script> 
+</body>
+
+
 </html>

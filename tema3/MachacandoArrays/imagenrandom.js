@@ -15,6 +15,6 @@ function numero(x){
 
 function imagenaleatoria(){
 
- document.getElementById("imagenaleatoria").src = imagen[numero(5)-1];
+ document.getElementById("imagenaleatoria").src = "images/" + imagen[numero];
 
 }
