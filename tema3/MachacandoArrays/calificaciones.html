@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calificaciones</title>
     <script src="calificaciones.js"></script>
+    <style>
+        #aviso{
+            color:red;
+        }
+    </style>
 
 </head>
 <body>
-    <input id="n" type="number" placeholder="Introduzca un numero">
-    <button onclick="añadir()">Añadir calificación</button>
-    <button onclick="eliminar()">Eliminar todas las calificaciones</button>
-    <button onclick="sumar()">Hacer la media de las calificaciones</button>
+    <h1> Calificaciones</h1>
+    <input id="numero" type="text" placeholder="Introduzca las calificaciones"> <br>
+    <p id="notas"></p> <!--Calificaciones introducidas-->
+    <p id="resultado"></p> <!--Media de las calificaciones-->
+    <p id="aviso"></p>
+    <button onclick="anadir()">Añadir calificación</button>
+    <button onclick="borrar()">Eliminar calificaciones</button>
+    <button onclick="calcularMedia()">Hacer la media de las calificaciones</button>
 
-
-    <p id="mostrar"></p> 
-   
 </body>
 </html>
