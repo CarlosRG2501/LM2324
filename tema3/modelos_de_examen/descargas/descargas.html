@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargas</title>
+</head>
+<body>
+    <p>Descargas</p>
+    <ul id="enlaces">
+    </ul>
+    <button type="button" onclick="anadirElemento()">Añade elemento</button>
+
+    <script>
+  window.onload = function() {
+            var enlacesDescarga = document.getElementById("enlaces");
+  }
+
+  var archivos = []
+
+  var s = 0;
+
+function sumar() {
+    s = 0
+    for (var i = 0 ; i< archivos.length; i++) {
+       
+    }
+    document.getElementById("mostrar").innerHTML = s;
+}
+  
+
+        function anadirElemento() {
+            var lista = document.getElementById("lista");
+            var elemento = document.createElement("li");
+            elemento.textContent = "Elemento " + (lista.children.length + 1); // Observa en la consola lista y lista.children
+            lista.appendChild(elemento);
+        }
+    </script>
+</body>
+</html>
