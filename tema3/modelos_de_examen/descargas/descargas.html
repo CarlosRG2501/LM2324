@@ -7,34 +7,18 @@
 </head>
 <body>
     <p>Descargas</p>
-    <ul id="enlaces">
-    </ul>
-    <button type="button" onclick="anadirElemento()">Añade elemento</button>
+    <ul id="lista"> </ul>
 
     <script>
-  window.onload = function() {
-            var enlacesDescarga = document.getElementById("enlaces");
-  }
-
-  var archivos = []
-
-  var s = 0;
-
-function sumar() {
-    s = 0
-    for (var i = 0 ; i< archivos.length; i++) {
-       
+ function crearPagina(){
+    var lista = document.getElementById("lista");
+    for (var i=1;i<=20;i++){
+    var elemento=document.createElement("li");
+    elemento.innerHTML = "<a href='ficheros/fichero"+i+".pdf' target='_blank'>Fichero " + (lista.children.length + 1)+"<img width='25' src='download.png'></a>"
+    lista.appendChild(elemento);
     }
-    document.getElementById("mostrar").innerHTML = s;
-}
-  
-
-        function anadirElemento() {
-            var lista = document.getElementById("lista");
-            var elemento = document.createElement("li");
-            elemento.textContent = "Elemento " + (lista.children.length + 1); // Observa en la consola lista y lista.children
-            lista.appendChild(elemento);
-        }
+ }
+window.onload = crearPagina();
     </script>
 </body>
 </html>
