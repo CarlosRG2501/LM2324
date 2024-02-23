@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claro y oscuro</title>
+</head>
+<body>
+    <h1>Cambia el tema de la pagina</h1>
+<button onclick="temaOscuro()">Modo oscuro</button>
+<button onclick="temaClaro()">Modo claro</button>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, eius porro unde explicabo minima eveniet, exercitationem voluptatibus neque temporibus, officia provident similique tenetur non mollitia eaque vel ipsa eligendi voluptates!</p>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum reiciendis recusandae, eveniet quia facere quae aliquam sit qui autem incidunt cupiditate veniam repellendus! Consequuntur animi autem nulla odit quod ut.</p>
+    
+    <script>               
+function temaOscuro(){
+document.body.style.backgroundColor = "black";
+document.body.style.color = "white";
+localStorage.setItem("fondoColor", "black");
+localStorage.setItem("textoColor", "white");
+
+}
+
+function temaClaro(){
+document.body.style.backgroundColor = "white";
+document.body.style.color = "black"
+localStorage.setItem("fondoColor", "white");
+localStorage.setItem("textoColor", "black");
+}
+
+function cargarPagina(){
+    var fondoColor = localStorage.getItem("fondoColor");
+    var textoColor = localStorage.getItem("textoColor");
+    
+    if (fondoColor && textoColor) {
+        document.body.style.backgroundColor = fondoColor;
+        document.body.style.color = textoColor;
+    } else {
+        temaClaro();
+    
+}
+}
+window.onload = cargarPagina();
+    </script>
+</body>
+</html>
