@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas</title>
+</head>
+<body>
+    <p>Añadir Tareas a una lista</p>
+    
+    <input type="text" id="tarea" placeholder="Nueva tarea">
+    <button type="button" onclick="anadirTarea()">Añade una tarea</button>
+    <ul id="lista">
+    </ul>
+
+    <script>
+        function anadirTarea() {
+            var tarea = document.getElementById("tarea").value;
+            var lista = document.getElementById("lista");
+            var Tarea = document.createElement("li");
+            Tarea.textContent = tara;
+            Tarea.textContent = tarea; // Observa en la consola lista y lista.children
+            lista.appendChild(Tarea);
+            problemas.push(Tarea);
+            for (var i=0;i<problemas.length;i++){
+                cadena = cadena + problemas[i].textContent + ",";
+            }
+            //Al finalizar el for en cadena tengo mi lista de tareas
+            localStorage.setItem("problemas", cadena);
+        }
+
+        function cargarPagina(){
+            let cadenaTarea = localStorage.getItem("problemas")
+            if(cadenaTarea!=null){
+
+            }
+        }
+window.onload = cargarPagina();
+    </script>
+</body>
+</html>
