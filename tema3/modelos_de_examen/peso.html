@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso</title>
+    <style>
+        #imagen{
+            
+        }
+    </style>
+</head>
+<body>
+    <img id="imagen" src="gimnasio.jpg" alt="no aparece">
+   <p> <label for="">Introduce tu peso:</label>
+    <input id="peso" type="text">
+<button onclick="guardar()">Comprobar</button> </p>
+
+    <script>
+
+function guardar(){
+  var peso;
+  peso = document.getElementById("peso").value;
+  localStorage.getItem("kilos", peso);
+}
+
+function cargarDatos(){
+    
+}
+    </script>
+</body>
+</html>
