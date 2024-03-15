@@ -34,7 +34,7 @@ function anadir(){
     //Borramos cualquier mensaje de error previo
     document.getElementById("aviso").innerHTML="";
     if (isNaN(numero)){
-        document.getElementById("aviso").innerHTML="Debes introducir un numro entre 0 y 10"
+        document.getElementById("aviso").innerHTML="Debes introducir un numero entre 0 y 10"
     }
     else{
     //Compruebo que esta comprendido entre 0 y 10
