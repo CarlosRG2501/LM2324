@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#boton").click(function(){
+                alert($("#caja").val());
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--Realiza un documento web con un campo de tipo input y prueba cómo funciona el método val() de jQuery 
+    visualizando ante el evento click de un botón su valor.-->
+    <h1>Caja de texto</h1>
+    <input type="text" id="caja" placeholder="Edad">
+    <button id="boton">Obtener valor</button>
+</body>
+</html>
