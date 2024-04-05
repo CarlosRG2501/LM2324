@@ -20,8 +20,8 @@
     <input type="email" name="" id="correo" placeholder="Email"required><span id="errorCorreo"></span><br>
     <input type="date" name="" id="fnac"><br>
     <input type="text" name="" id="dni" placeholder="DNI:12345678X" required><br>
-    <input type="password" name="" id="password1" placeholder="Contraseña" required><br>
-    <input type="password" name="" id="password2" placeholder="Repite la contraseña" required><br>
+    <input type="password" name="" id="password1" placeholder="Contraseña" required><span id="errorContra1"></span><br>
+    <input type="password" name="" id="password2" placeholder="Repite la contraseña" required><span id="errorContra1"></span><br>
     <input type="checkbox" name="" id="privacidad" required><label for="">Acepta la política de privacidad</label><br>
     <button>Registrarse</button>
     <script>
@@ -31,6 +31,9 @@
                 let apellidos = $("#apellidos").val();
                 let correo = $("#correo").val();
                 let patronEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+                let patronContraseña = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/ ;
+                let contra1 = $("#password1").val();
+                let contra2 = $("#password1").val();
                 if (nombre==""){
                     $("#errorNombre").text("Rellenar el campo nombre");
                 }
@@ -54,6 +57,16 @@
                     }
                     else{
                         $("#errorCorreo").text("");
+                    }
+                }
+                if (contra1!=contra2){
+                    $("#errorContra1").text("Las contraseñas deben coincidir")
+                    $("#errorContra2").text("Las contraseñas deben coincidir")
+                }
+                else{
+                    if(!patronContraseña.test(contra1)){
+                        $("errorContra1").text("No cumple con los requisitos. Longitud mínima de 8, incluir una minúscula, mayúscula y dígito");
+                        $("errorContra2").text("No cumple con los requisitos");
                     }
                 }
             })
