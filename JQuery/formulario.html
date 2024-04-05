@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        input{
+            margin: 5px 5px;
+        }
+        span{
+            color: red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" placeholder="Nombre" id="nombre" required><span id="errorNombre"></span><br>
+    <input type="text" placeholder="Apellidos" id="apellidos" required><span id="errorApellidos"></span><br>
+    <input type="email" name="" id="correo" placeholder="Email"required><span id="errorCorreo"></span><br>
+    <input type="date" name="" id="fnac"><br>
+    <input type="text" name="" id="dni" placeholder="DNI:12345678X" required><br>
+    <input type="password" name="" id="password1" placeholder="Contraseña" required><br>
+    <input type="password" name="" id="password2" placeholder="Repite la contraseña" required><br>
+    <input type="checkbox" name="" id="privacidad" required><label for="">Acepta la política de privacidad</label><br>
+    <button>Registrarse</button>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                let nombre = $("#nombre").val();
+                let apellidos = $("#apellidos").val();
+                let correo = $("#correo").val();
+                let patronEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+                if (nombre==""){
+                    $("#errorNombre").text("Rellenar el campo nombre");
+                }
+                else{
+                    $("#errorNombre").text("");
+                }
+                if (apellidos==""){
+                    $("#errorApellidos").text("Rellenar el campo apellidos");
+                }
+                else{
+                    $("#errorApellidos").text("");
+                }
+                if (correo==""){
+                    $("#errorCorreo").text("Rellenar el campo correo");
+                }
+                else{
+                    //El correo no es la cadena vacía
+                    if(!patronEmail.test(correo)){
+                        //No encaja con el patrón Email
+                        $("#errorCorreo") .text("Formato de correo no válido");
+                    }
+                    else{
+                        $("#errorCorreo").text("");
+                    }
+                }
+            })
+        });
+    </script>
+</body>
+</html
