@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor jQuery</title>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Conversor de Dolares a Euros</h1>
+    <input type="text" id="dolares" placeholder="Inroduce dolares aquí $$$$$$$$">
+    <button>Convertir</button>
+    <p id="objetivo"></p>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function (){
+                let dolares = parseFloat($("#dolares").val());
+            let url= "https://v6.exchangerate-api.com/v6/3e32064a0917bfa535cf6ad9/latest/USD"
+            $.get(url).done(function(datos){
+                let factor_conversion = parseFloat(datos.conversion_rates.EUR);
+                let euros = dolares * factor_conversion;
+                $("#objetivo").text("La cantidad en euros es " + euros);
+                
+            }).fail(function(){
+                $("#objetivo").text("Ha ocurrido un error en la llamada a la API")
+            })
+            
+            })
+        });
+    </script>
+</body>
+</html>
