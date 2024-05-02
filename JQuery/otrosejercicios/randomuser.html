@@ -51,51 +51,53 @@
     </div>
     <script>
         $(document).ready(function () {               // Datos de un usuario aleatorio
-            $("#btn-generico").click(function () {
-                $.ajax({
-                    url: 'https://randomuser.me/api/',
-                     function (datos) {
-                        mostrarUsuario(datos.resultados[0]);
-                    }
+                $("#btn-generico").click(function () {
+                    $.ajax({
+                        url: 'https://randomuser.me/api/',
+                        sucess: function (datos) {
+                           console.log(datos);
+                        }
+                    });
                 });
-            });
-    
-            
-            $("#btn-espanol").click(function () {    //Datos de un usuario aleatorio español
-                $.ajax({
-                    url: 'https://randomuser.me/api/?nat=es',
-                     function (datos) {
-                        mostrarUsuario(datos.resultados[0]);
-                    }
-                });
-            });
-    
-           
-            $("#btn-varios").click(function () {     //Datos de 5 usuarios aleatorios españoles
-                $.ajax({
-                    url: 'https://randomuser.me/api/?nat=es&resultados=5',
-                     function (datos) {
-                        mostrarUsuarios(datos.resultados);
-                    }
-                });
-            });
-    
-           
-            function mostrarUsuario(usuario) {       // Poner los datos en el cuadro
 
-                $("nombrecompleto").text(usuario.name.first + " " + usuario.name.last);
-                $("nombreusuario").text("nombreusuario: " + usuario.login.username);
-                $("email").text("Email: " + usuario.email);
-                $("ciudad").text("Ciudad: " + usuario.location.city);
-                $("circle").attr("src", usuario.picture.large);
-            }
-    
-            
-            function mostrarUsuarios(usuarios) {     // Poner los datos de varios usuarios
-                
 
-            }
-        });
+                $("#btn-espanol").click(function () {    //Datos de un usuario aleatorio español
+                    $.ajax({
+                        url: 'https://randomuser.me/api/?nat=es',
+                        sucess: function (datos) {
+                            console.log(datos);
+                        }
+                    });
+                });
+
+
+                $("#btn-varios").click(function () {     //Datos de 5 usuarios aleatorios españoles
+                    $.ajax({
+                        url: 'https://randomuser.me/api/?nat=es&resultados=5',
+                        sucess: function (datos) {
+                            console.log(datos);
+                        }
+                    });
+                });
+
+
+                function mostrarUsuario(usuario) {       // Poner los datos en el cuadro
+
+                    $("nombrecompleto").text(usuario.name.first + " " + usuario.name.last);
+                    $("nombreusuario").text("nombreusuario: " + usuario.login.username);
+                    $("email").text("Email: " + usuario.email);
+                    $("ciudad").text("Ciudad: " + usuario.location.city);
+                    $("circle").attr("src", usuario.picture.large);
+                }
+
+
+                function mostrarUsuarios(usuarios) {     // Poner los datos de varios usuarios
+                    
+                    
+
+
+                }
+            });
     </script>
 </body>
 
