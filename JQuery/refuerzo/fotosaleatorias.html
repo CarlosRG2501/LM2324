@@ -9,21 +9,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
   <body>
-    <h1>Consumiento datos de la API de openweathermap</h1>
+    <h1>Fotos aleatorias</h1>
     <div class="container">
         <p id="objetivo"></p>
     </div>
     <script>
         /* Completar el código jQuery aquí */
         $(document).ready(function (){
-          let apikey = "888dbeb728c10d0bf630dd8e252aa0d4" //Mi API key
-          let url = "https://api.openweathermap.org/data/2.5/weather?" //API call
-          let latitud = "37.38283"
-          let longitud = "-5.97317"
-          let url_completa = url +"lat="+latitud+"&lon="+longitud+"&units=metric&appid="+apikey;
+          let apikey = "80Ujp882Se0lzkcASs5ddSaIW3c0d2ku59q3HeSMnn0" //Mi API key
+          let url = "https://api.unsplash.com/photos/random?client_id=" //API call
+          let url_completa = url+apikey;
           $.get(url_completa).done(function (datos){
-            console.log(datos.main.temp);
-            $("#objetivo").text("La temperatura en Sevilla es de "+datos.main.temp+"º Celsius")
+            console.log(datos);
+            $("#objetivo").image("La temperatura en Sevilla es de "+datos+"º Celsius")
           }).fail(function (){
             $("#objetivo").text("Ha ocurrido un error en la llamada al servicio")
           });
