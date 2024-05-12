@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Usuarios github</h1>
+    <label for="">Escribe el nombre de usuario</label>
+    <input id="nombreusuario" type="text">
+    <button id="boton">Buscar</button>
+    <p id="resultado"></p>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#boton").click(function () {
+                $("#resultado").empty()
+                let nombre = $("#nombreusuario").val()
+                let url = "https://api.github.com/users/" + nombre
+
+            $.get(url).done(function (datos) {
+                    let imagen = datos.avatar_url
+                    let inicio = datos.login
+                    let creado = datos.created_at
+                    $("#resultado").append("Nombre: " + inicio + "<br>");
+                    $("#resultado").append("Creado el " + creado + "<br>");
+                    $("#resultado").append('<p>' + '<img src="' + imagen + '"></p>');
+                })
+            })
+        });
+
+    </script>
+</body>
+
+</html>

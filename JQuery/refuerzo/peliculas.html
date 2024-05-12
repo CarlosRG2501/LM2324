@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Busca peliculas</h1>
+    <label for="">Escribe el titulo de una película</label>
+    <input id="pelicula" type="text">
+    <button id="boton">Buscar</button>
+    <p id="resultado"></p>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#boton").click(function () {
+                $("#resultado").empty()
+                let nombre = $("#pelicula").val()
+                let url = "http://www.omdbapi.com/?apikey=f97c3337=" + nombre
+
+            $.get(url).done(function (datos) {
+                    let imagen = datos.Poster
+                    let titulo = datos.Title
+                    let estreno = datos.Released
+                    let resumen = datos.Plot
+                    $("#resultado").append("Título: " + titulo + "<br>");
+                    $("#resultado").append("Se estrenó el " + estreno + "<br>");
+                    $("#resultado").append(resumen + "<br>");
+                    $("#resultado").append('<p>' + '<img src="' + imagen + '"></p>');
+                })
+            })
+        });
+
+    </script>
+</body>
+
+</html>
