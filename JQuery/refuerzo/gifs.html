@@ -20,7 +20,7 @@
     $("#boton").click(function () {
         let texto = $("#texto").val()
 
-        let url = "https://api.giphy.com/v1/gifs/search?api_key=AmkN2TOZh1P4zBHEiURkJ1hqiQGtvrBk=" + texto
+        let url = "https://api.giphy.com/v1/gifs/search?api_key=AmkN2TOZh1P4zBHEiURkJ1hqiQGtvrBk&q=" + texto
         $.get(url).done(function (datos) {
         $("#resultado").empty()
 

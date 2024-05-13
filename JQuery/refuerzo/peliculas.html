@@ -21,7 +21,7 @@
             $("#boton").click(function () {
                 $("#resultado").empty()
                 let nombre = $("#pelicula").val()
-                let url = "http://www.omdbapi.com/?apikey=f97c3337=" + nombre
+                let url = "http://www.omdbapi.com/?apikey=f97c3337&t=" + nombre
 
             $.get(url).done(function (datos) {
                     let imagen = datos.Poster
