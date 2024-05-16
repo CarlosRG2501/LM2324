@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>GIFs de Giphy</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <input type="text" id="texto" placeholder="Introduce un texto para buscar GIFs">
+    <button id="buscar">Buscar</button>
+    <div id="resultado"></div>
+
+    <script>
+        $(document).ready(function () {
+    $('#buscar').click(function () {
+        let texto = $('#texto').val();
+        let apiKey = 'CQnaq3bgYNirr5o8iT8a8zl5QROqtKzo'; // Reemplaza esto con tu propia API key
+
+        // Llamada getJSON utilizando jQuery
+        $.getJSON(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${texto}`, function (data) {
+            let resultadoHTML = '';
+
+            if (data.data.length > 0) {
+                data.data.forEach(function (gif) {
+                    resultadoHTML += `
+                    <div>
+                        <img src="${gif.images.fixed_height_small.url}" alt="${gif.title}">
+                        <p>${gif.title}</p>
+                    </div>
+                    `;
+                });
+            } else {
+                resultadoHTML = '<p>No se encontraron GIFs.</p>';
+            }
+
+            $('#resultado').html(resultadoHTML);
+        }).fail(function () {
+            $('#resultado').html('<p>Error al buscar los GIFs.</p>');
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
