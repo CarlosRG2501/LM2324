@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-
-
-
-
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
     <title>Fake Store API</title>
     <style>
         body {
@@ -69,7 +68,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="contenedor">
         <div class="formulario">
@@ -79,11 +77,42 @@
             <br>
             <label for="botones">Acción:</label>
             <button id="btn-todos">Ver</button>
-            <div id="resultados">
-                <!-- Aqui cargaremos los resultados-->
-            </div>
+            <div id="resultados"></div>
+            <!--Aquí cargaremos los resultados-->
         </div>
     </div>
+    <script>
+        $(document).ready(function () {    
+            $( function() {
+                let auto = [
+                    "electronics",
+                    "jewelery",
+                    "men's clothing",
+                    "women's clothing"
+                ];
+                $( "#categoria" ).autocomplete({
+                    source: auto
+                });
+            });
+        
+            $("#btn-todos").click(function(){
+                let categoria = $("#categoria").val()
+                let url = "https://fakestoreapi.com/products/category/" + categoria
+                $.get(url).done(function(datos){
+                    $("#resultados").empty()
+                    for(var i=0; i<datos.length; i++){
+                        $("#resultados").append('<img width="200px" height="200px" src="'+ datos[i].image +'">')
+                        $("#resultados").append("<p>Titulo: "+ datos[i].title +"</p>")
+                        $("#resultados").append("<p>Categoría: "+ datos[i].category +"</p>")
+                        $("#resultados").append("<p>Nota: "+ datos[i].rating.rate +"</p>")
+                        $("#resultados").append("<p>Descripción: "+ datos[i].description +"</p>")
+                        $("#resultados").append("<p>Precio: "+ datos[i].price +"</p>")
+                    }
+                }).fail(function(){
+                    $("#resultados").text("Error")
+                })
+            })  
+        });
+    </script>
 </body>
-
 </html>
